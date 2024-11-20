@@ -1,0 +1,1340 @@
+/* los estilos de el body y navbar son iguales en todas la pagina */
+body {
+    background-color: #A7B8FC;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-titulo {
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 38px;
+    margin: 0;
+    position: relative;
+    left: 15px;
+    display: inline;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 20px;
+    background-color: #000000;
+    transition-duration: 700ms;
+}
+
+.navbar .nav-link.active {
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 120%;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.navbar .nav-link.active:hover {
+    color: #c5c5c5;
+     background-color: #333;
+     transform-origin: 200ms;
+     box-shadow: 0 0 8px gray
+}
+
+.boton-inicio {
+    padding: 15px 15px;
+    background-color: black;
+    font-size: 100%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+
+/* inicio de los estilos de la pagina registro */
+
+.info-registro {
+    background-color: white;
+    position: absolute;
+    bottom: 10%;
+    top: 20%;
+    right: 30%;
+    left: 30%;
+    border-radius: 20px;
+    border: 2px gray solid;
+    transition-duration: 300ms;
+}
+    
+.info-texto {
+    position: absolute;
+    top: 8%;
+    left: 30%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.cedula{
+    position: absolute;
+    top: 28%;
+    left: 10%;
+    right: 10%;
+    border-radius: 15px;
+    border: 2px gray solid;
+}
+.cedula-text{
+    position: absolute;
+    top: 22%;
+    left: 11%;
+}
+.nombre{
+    position: absolute;
+    top: 42%;
+    left: 10%;
+    right: 10%;
+    border-radius: 15px;
+    border: 2px gray solid;
+}
+.nombre-text{
+    position: absolute;
+    top: 37%;
+    left: 11%;
+}
+
+.correo{
+    position: absolute;
+    top: 56%;
+    left: 10%;
+    right: 10%;
+    border-radius: 15px;
+    border: 2px gray solid;
+}
+.correo-text{
+    position: absolute;
+    top: 50%;
+    left: 11%;
+}
+.contraseña{
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    right: 10%;
+    border-radius: 15px;
+    border: 2px gray solid;
+}
+.contraseña-text{
+    position: absolute;
+    top: 64%;
+    left: 11%;
+}
+.slogan {
+    position: absolute;
+    bottom: 15%;
+    left: 32%;
+}
+
+.registrarse {
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    background-color: #A7B8FC;
+    border-radius: 10px;
+    border: 2px blue solid;
+    width: 160px;
+}
+
+.registrarse:hover {
+    background-color: #496eff;
+    box-shadow: 5px;
+    box-shadow: 0 0 12px blue;
+}
+.ejemplo {
+    position: absolute;
+    left: 45%;
+    top: 15%;
+}
+@media(max-width:800px)
+
+/* estilos para pantallas medianas */
+    {
+    .info-registro{
+        position: absolute;
+        top: 10%;
+        left: 2%;
+        right: 2%;
+        bottom: 2%;
+        text-align: center;
+    }
+    .info-texto {
+        position: absolute;
+        top: 8%;
+        left: 20%;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 270%;
+        text-align: center;
+    }
+    .cedula{
+        position: absolute;
+        top: 27%;
+        left: 5%;
+        right: 5%;
+        height: 50px;
+        font-size: 200%;
+
+    }
+    .cedula-text{
+        position: absolute;
+        top: 21%;
+        left: 6%;
+        font-size: 180%;
+    }
+    .nombre{
+        position: absolute;
+        top: 43%;
+        left: 5%;
+        right: 5%;
+        height: 50px;
+        font-size: 200%;
+    }
+    .nombre-text{
+        position: absolute;
+        top: 37%;
+        left: 6%;
+        font-size: 180%;
+    }
+    
+    .correo{
+        position: absolute;
+        top: 60%;
+        left: 5%;
+        right: 5%;
+        height: 50px;
+        font-size: 200%;
+    }
+    .correo-text{
+        position: absolute;
+        top: 53%;
+        left: 6%;
+        font-size: 200%;
+    }
+    .contraseña{
+        position: absolute;
+        top: 75%;
+        left: 5%;
+        right: 5%;
+        height: 50px;
+        font-size: 200%;
+    }
+    .contraseña-text{
+        position: absolute;
+        top: 69%;
+        left: 6%;
+        font-size: 200%;
+    }
+    .registrarse{
+        top: 91%;
+        left: 32%;
+        font-size: 200%;
+    }
+}
+
+
+/* fin de los estilos de registro */
+
+
+
+
+/* inicio de los estilo de iniciar sesion */
+.info-inicio-sesion {
+    background-color: white;
+    position: absolute;
+    bottom: 10%;
+    top: 20%;
+    right: 30%;
+    left: 30%;
+    border-radius: 20px;
+    border: 2px gray solid;
+}
+.info-ses-texto {
+    position: absolute;
+    top: 8%;
+    left: 30%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.correo-ses{
+    position: absolute;
+    top: 36%;
+    left: 10%;
+    right: 10%;
+    border-radius: 15px;
+    border: 2px gray solid;
+}
+.correo-ses-text{
+    position: absolute;
+    top: 30%;
+    left: 11%;
+}
+.contraseña-ses{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    border-radius: 15px;
+    border: 2px gray solid;
+}
+.contraseña-ses-text{
+    position: absolute;
+    top: 45%;
+    left: 11%;
+}
+.registrarme{
+    position: absolute;
+    top: 90%;
+    left: 8%;
+    color: #000000;
+    text-decoration: none;
+    transition-duration: 400ms;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.registrarme:hover{
+    color: #496eff;
+    text-decoration-line: underline;
+    font-size: 110%;
+    transition-duration: 200ms;
+}
+.rec-contraseña{
+    position: absolute;
+    top: 90%;
+    left: 68%;
+    color: #000000;
+    text-decoration: none;
+    transition-duration: 400ms;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.rec-contraseña:hover{
+    color: #496eff;
+    text-decoration-line: underline;
+    font-size: 110%;
+    transition-duration: 200ms;
+}
+.Iniciar-sesion{
+    position: absolute;
+    top: 74%;
+    left: 35%;
+    background-color: #A7B8FC;
+    border-radius: 10px;
+    border: 2px blue solid;
+    width: 160px;   
+}
+.Iniciar-sesion:hover{
+    background-color: #496eff;
+    box-shadow: 5px;
+    box-shadow: 0 0 12px blue;
+}
+@media(max-width: 800px){
+    .info-inicio-sesion {
+        position: absolute;
+        top: 10%;
+        left: 2%;
+        right: 2%;
+        bottom: 2%;
+        text-align: center;
+    }
+    .info-ses-texto{
+        position: absolute;
+        top: 4%;
+        left: 20%;
+        font-size: 270%;
+        text-align: center;
+    }
+    .correo-ses{
+        position: absolute;
+        top: 27%;
+        left: 5%;
+        right: 5%;
+        height: 50px;
+        font-size: 200%;
+    }
+    .correo-ses-text{
+        position: absolute;
+        top: 20%;
+        left: 6%;
+        font-size: 180%;
+    }
+    .contraseña-ses{
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        right: 5%;
+        font-size: 180%;
+    }
+    .contraseña-ses-text{
+        position: absolute;
+        top: 43%;
+        left: 6%;
+        font-size: 180%;
+    }
+    .registrarme{
+        position: absolute;
+        top: 90%;
+        left: 8%;
+        font-size: 180%;
+    }
+    .registrarme:hover{
+        font-size: 190%;
+    }
+    .rec-contraseña{
+        position: absolute;
+        top: 87%;
+        right: 8%;
+        font-size: 180%;
+        text-align: center;
+    }
+    .Iniciar-sesion{
+        position: absolute;
+        top: 71%;
+        left: 12%;
+        width: 560px;   
+        height: 90px;
+        font-size: 150%;
+    }
+}
+@media (max-width: 500px){
+    .info-inicio-sesion {
+        position: absolute;
+        top: 10%;
+        left: 2%;
+        right: 2%;
+        bottom: 2%;
+        text-align: center;
+    }
+    .rec-contraseña{
+        position: absolute;
+        top: 83%;
+        right: 10%;
+        font-size: 150%;
+        text-align: center;
+    }
+    .Iniciar-sesion{
+        position: absolute;
+        top: 71%;
+        left: 5%;
+        width: auto;   
+        height: auto;
+        font-size: 150%;
+    }
+}
+/* fin de los estilos de iniciar sesion */
+
+
+/* inicio de los estilos de inicio */
+.header {
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(2.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.banner_text.oculto{
+    opacity: 0;
+}
+
+.banner_text {
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 35%;
+	transform: translate(-50%, -50%);
+	text-align: left;
+	font-size: 10%;
+	font-family: "Roboto", sans-serif;
+    opacity: 1;
+    transition: opacity 800ms ease-out;
+}
+
+
+
+.banner_text button {
+	background: #6584ff;
+	border: none;
+	outline: none;
+	color: #fff;
+	padding: 10px 30px;
+	font-size: 20px;
+	font-family: montserrat;
+	display: inline-block;
+}
+
+
+.banner-text button:hover {
+    background:#A7B8FC;
+    cursor: pointer;
+}
+#myVideo {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1; /* Para que el texto esté encima del video */
+  }
+  .main_section.aparecer {
+    opacity: 1; 
+    visibility: visible;
+}
+
+.main_section {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; 
+    background-color: #A7B8FC;
+    padding: 40px;
+    opacity: 0; 
+    transition: opacity 800ms ease; 
+    visibility: hidden; /* Oculta inicialmente */
+}
+
+
+.info-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff; /* Cambia este color al que desees para el fondo de la información */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    flex: 1;
+    padding: 10px;
+    background-color: #ffffff; /* Cambia este color al que desees para el fondo de la imagen */
+    border-radius: 8px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+};
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px 0;
+}
+
+.promo {
+    background-color: #A7B8FC;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.reserva-index{
+    color: white;
+    text-decoration-line: none;
+}
+
+@media (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+    }
+
+    .info-container, .image-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+/*fOOTER*/
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 10px 0; /* Reduce el padding vertical para adelgazar el footer */
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Ajusta el padding horizontal si es necesario */
+  }
+
+  
+  .social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    text-decoration: none;  /* Asegúrate de que no haya subrayado en los enlaces */
+    border: none; /* Elimina cualquier borde que pueda estar apareciendo */
+  }
+  
+  .social-links a img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle; /* Alinea las imágenes al centro verticalmente */
+  }
+  
+  
+  .social-links a:hover {
+    transform: scale(1.2);
+  }
+  
+  .legal-links {
+    margin: 15px 0;
+  }
+  
+  .legal-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .legal-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-copy {
+    font-size: 14px;
+  }
+/* fin estilos de inicio */
+
+
+
+
+/* inicio estilos de historial */
+.btn-outline-primary {
+    margin-top: 1rem;
+}
+
+/* Estilos para la tabla */
+.table {
+    background-color: #f8f9fa;
+}
+
+.table th, .table td {
+    text-align: center;
+}
+
+.table thead {
+    background-color: burlywood;
+}
+.pie{
+    background-color: black;
+    padding: 15px 15px;  
+}
+.contenido-historial{
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    left: 5%;
+}
+input[type="date"], input[type="search"], input[type="time"] {
+    transition: none;
+    position: static;
+}
+.dropdown-menu {
+    display: none;
+    position: static;
+    z-index: 1;
+}
+.btn-group {
+    position: static;
+}
+
+/* fin estilos reservas */
+
+
+
+
+
+/* inicio estilos reservas */
+.mapa-de-reservas{
+    background-color: rgb(69, 69, 69);
+    position: absolute;
+    top: 20%;
+    bottom: -45%;
+    left: 2%;
+    right: 1%;
+}
+button:hover{
+    transform: scale(1.1);
+    transition-duration: 500ms;
+    cursor: pointer;
+}
+#seccion-a{
+    color: white;
+    position: absolute;
+    background-color: black;
+    border-top: 5px rgb(151, 151, 0) solid;
+    border-left: 5px rgb(151, 151, 0) solid;
+    border-right: 5px rgb(151, 151, 0) solid;
+    height: 80px;
+    width: 60px;
+    top: 5px;
+}
+.a1{
+    left: 5px;
+}
+.a2{
+    left: 70px;
+}
+.a3{
+    
+    left: 135px;   
+}
+.a4{
+    left: 200px;
+}
+.a5{
+    left: 265px;
+}
+.a6{
+    left: 330px;
+}
+.a7{
+    left: 395px;
+}
+.a8{
+    left: 460px;
+}
+.a9{
+    left: 525px;
+}
+.a10{
+    left: 590px;
+}
+.a11{
+    left: 655px;
+}
+.a12{
+    left: 720px;
+}
+.a13{
+    left: 785px;
+}
+.a14{
+    left: 850px;
+}
+.a15{
+    left: 915px;
+}
+.a16{
+    left: 980px;
+}
+.a17{
+    left: 1045px;
+}
+.a18{
+    left: 1110px;
+}
+.a19{
+    left: 1175px;
+}
+.a20{
+    left: 1240px;
+}
+.discapacidad-a21{width: 60px;
+    left: 1303px;
+}
+.discapacidad-a22{
+    left: 1368px;
+}
+#seccion-b{
+    color: white;
+    position: absolute;
+    background-color: black;
+    border-bottom: 5px rgb(151, 151, 0) solid;
+    border-left: 5px rgb(151, 151, 0) solid;
+    border-right: 5px rgb(151, 151, 0) solid;
+    height: 80px;
+    width: 60px;
+    top: 200px;
+}
+.b1{
+    left: 5px;
+}
+.b2{
+    left: 70px;
+}
+.b3{
+    left: 135px;   
+}
+.b4{
+    left: 200px;
+}
+.b5{
+    left: 265px;
+}
+.b6{
+    left: 330px;
+}
+.b7{
+    left: 395px;
+}
+.b8{
+    left: 460px;
+}
+.b9{
+    left: 525px;
+}
+.b10{
+    left: 590px;
+}
+.b11{
+    left: 655px;
+}
+.b12{
+    left: 720px;
+}
+.b13{
+    left: 785px;
+}
+.b14{
+    left: 850px;
+}
+.b15{
+    left: 915px;
+}
+.b16{
+    left: 980px;
+}
+.b17{
+    left: 1045px;
+}
+.b18{
+    left: 1110px;
+}
+.b19{
+    left: 1175px;
+}
+.b20{
+    left: 1240px;
+}
+.discapacidad-b21{
+    left: 1303px;
+}
+.discapacidad-b22{
+    left: 1368px;
+}
+
+.tu-eleccion{
+    background-color: green;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    bottom: 58%;
+    left: 15%;
+}
+.ocupado{
+    background-color: red;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    bottom: 58%;
+    left: 30%;
+}
+.no-disponible{
+    background-color: gray;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    bottom: 58%;
+    left: 45%;
+}
+.libre{
+    background-color: black;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    bottom: 58%;
+    left: 60%;
+}
+.discapacidad{
+    position: absolute;    
+    bottom: 4%;
+    left: 11%;
+    bottom: 12%;
+}
+.discapacidad1{
+    background-color: black;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    bottom: 58%;
+    left: 75%;
+}
+.tu-eleccion-text{
+    position: absolute;
+    bottom: 58%;
+    left: 19%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 130%;  
+    color: white;
+}
+.ocupado-text{
+    position: absolute;
+    bottom: 58%;
+    left: 34%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 130%;  
+    color: white;
+}.no-disponible-text{
+    position: absolute;
+    bottom: 58%;
+    left: 49%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 130%;  
+    color: white;
+}
+.libre-text{
+    position: absolute;
+    bottom: 58%;
+    left: 64%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 130%;  
+    color: white;
+}
+.discapacidad-text{
+    position: absolute;
+    bottom: 58%;
+    left: 79%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 130%;  
+    color: white;
+}
+.Reservar{
+    position: absolute;
+    padding: 5px 5px;
+    background-color: #024A98;
+    border-radius: 10px;
+    width: 100px;
+    border: 2px #00336a solid;
+    bottom: 45%;
+    left: 26%;
+}
+.Reservar:hover{
+    box-shadow: 0 0 10px blue;
+}
+.Rentar{
+    position: absolute;
+    padding: 5px 5px;
+    background-color: #024A98;
+    border-radius: 10px;
+    width: 100px;
+    border: 2px #00336a solid;
+    bottom: 45%;
+    left: 66%;
+}
+.Rentar:hover{
+    box-shadow: 0 0 10px blue;
+}
+.prom-desc {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    bottom: 14%;
+    left: 30%;
+}
+.card-desc , .card-prom {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card-desc:hover , .card-prom:hover {
+    transform: translateY(-10px);
+}
+
+.card-content-desc h2 , .card-content-prom h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #0033ff;
+}
+
+.card-content-desc p , .card-content-prom p {
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.obt-desc , .obt-prom {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6584ff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.obt-desc:hover , .obt-prom:hover {
+    background-color: #A7B8FC;
+}
+.modal.show .modal-contenido {
+    transform: scale(1); /* Escala normal */
+    opacity: 1; /* Visible */
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-contenido {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    right: 20%;
+    bottom: 10%;
+    background-color: white;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #A7B8FC;
+    transform: scale(0.7); /* Escala inicial para el efecto de zoom */
+    opacity: 0; /* Empieza invisible */
+    transition: transform 0.3s ease, opacity 700ms ease; 
+}
+.titulo-form{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 85%;
+    background-color: black;
+}
+.titulo-text{
+    position: absolute;
+    right: 35%;
+    color: white;
+}
+.close {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+    transition-duration: 200ms;
+}
+
+.close:hover,
+.close:focus {
+    cursor: pointer;
+    color: #A7B8FC;
+    transform: scale(1.5);
+    transition-duration: 400ms;
+}
+#medio-de-pago{ 
+    position: absolute;
+    bottom: 34%;
+    right: 10%;
+    border-radius: 10px;
+    border: 2px #486dff solid;
+}
+.medio-de-pago{
+    position: absolute;
+    bottom: 34%;
+    right: 28%;
+}
+#placa{
+    position: absolute;
+    bottom: 34%;
+    left: 25%;
+    border-radius: 10px;
+    border: 2px #486dff solid;
+    transition-duration: 400ms;
+}
+.placa{
+    position: absolute;
+    bottom: 34%;
+    left: 11%;
+}
+#fecha{
+    position: absolute;
+    bottom: 70%;
+    left: 51%;
+    border-radius: 10px;
+    border: 2px #486dff solid;
+    transition-duration: 400ms;
+}
+.fecha{
+    position: absolute;
+    bottom: 70%;
+    left: 35%;
+}
+#hora1{
+    position: absolute;
+    bottom: 52%;
+    left: 25%;
+    width: 20%;
+    border-radius: 10px;
+    border: 2px #486dff solid;
+    transition-duration: 400ms;
+}
+.hora1{
+    position: absolute;
+    bottom: 52%;
+    left: 11%;
+}
+#hora2{
+    position: absolute;
+    bottom: 52%;
+    right: 10%;
+    width: 16%;
+    border-radius: 10px;
+    border: 2px #486dff solid;
+    transition-duration: 400ms;
+}
+.hora2{
+    position: absolute;
+    bottom: 52%;
+    right: 29%;
+}
+.fin-reserva{
+    position: absolute;
+    top: 85%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-color: black;
+    
+}
+.total{
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    color: white;
+}
+.pagar{
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    padding: 5px 5px;
+    background-color: #A7B8FC;
+    border-radius: 10px;
+    width: 100px;
+    border: 2px #00336a solid;
+    cursor: pointer;
+}
+.pagar:hover{
+    box-shadow: 0 0 10px blue;
+}
+.isotipo{
+    position: absolute;
+    top: 30%;
+    margin-left: 28%;
+    width: 40%;
+    left: auto;
+}
+.modal-renta.show .modal-contenido-renta {
+    transform: scale(1); /* Escala normal */
+    opacity: 1;
+}
+
+.modal-renta {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-contenido-renta {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    right: 20%;
+    bottom: 10%;
+    background-color: white;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #A7B8FC;
+    transform: scale(0.7); /* Escala inicial para el efecto de zoom */
+    opacity: 0; /* Empieza invisible */
+    transition: transform 0.3s ease, opacity 700ms ease; 
+}
+
+.titulo-form-renta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 85%;
+    background-color: black;
+}
+
+.titulo-text-renta {
+    position: absolute;
+    right: 38%;
+    color: white;
+}
+
+.close-renta {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+    transition-duration: 200ms;
+}
+
+.close-renta:hover,
+.close-renta:focus {
+    cursor: pointer;
+    color: #A7B8FC;
+    transform: scale(1.5);
+    transition-duration: 400m;
+}
+
+#medio-de-pago-renta {
+    position: absolute;
+    bottom: 34%;
+    right: 8%;
+    border-radius: 10px;
+    border: 2px #486dff solid;
+}
+
+.medio-de-pago-renta {
+    position: absolute;
+    bottom: 34%;
+    right: 25%;
+}
+
+#placa-renta {
+    position: absolute;
+    bottom: 34%;
+    left: 25%;
+    border-radius: 10px;
+    border: 2px #486dff solid;
+}
+
+.placa-renta {
+    position: absolute;
+    bottom: 34%;
+    left: 11%;
+}
+
+#fecha-inicio-renta {
+    position: absolute;
+    bottom: 70%;
+    left: 25%;
+    width: 170px;
+    border-radius: 10px;
+    border: 2px #486dff solid;
+}
+
+.fecha-inicio-renta {
+    position: absolute;
+    bottom: 70%;
+    left: 11%;
+}
+
+.fin-renta {
+    position: absolute;
+    top: 85%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+}
+
+.total-renta {
+    position: absolute;
+    left: 2%;
+    top: 20%;
+    color: white;
+}
+
+.pagar-renta {
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    padding: 5px 5px;
+    background-color: #A7B8FC;
+    border-radius: 10px;
+    width: 100px;
+    border: 2px #00336a solid;
+    cursor: pointer;
+}
+
+.pagar-renta:hover {
+    box-shadow: 0 0 10px blue;
+}
+
+.isotipo {
+    position: absolute;
+    top: 30%;
+    margin-left: 28%;
+    width: 40%;
+    left: auto;
+}
+.tiempo-de-renta{
+    position: absolute;
+    bottom: 70%;
+    right: 25%;
+}
+#tiempo-de-renta{
+    position: absolute;
+    bottom: 70%;
+    right: 8%;
+    border-radius: 10px;
+    border: 2px #486dff solid;
+}
+
+
+input:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px #486dff;
+    transition-duration: 800ms;
+    transition: 600ms;
+}
