@@ -40,3 +40,31 @@ window.onclick = function (event) {
         setTimeout(() => modal_renta.style.display = "none", 300);
     }
 }
+
+// Función para manejar la reserva mediante AJAX
+function reservarEspacio(espacio) {
+    // Enviar la solicitud AJAX al servidor
+    fetch('reservar.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `espacio=${encodeURIComponent(espacio)}`
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data); // Muestra el mensaje del servidor
+        // Puedes agregar lógica adicional para cambiar el estado del botón o realizar otras acciones.
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Ocurrió un error al intentar realizar la reserva.');
+    });
+}
+
+// Función que se ejecuta al hacer clic en un botón de reserva
+function seleccionarEspacio(espacio) {
+    if (confirm(`¿Estás seguro que deseas reservar el espacio ${espacio}?`)) {
+        reservarEspacio(espacio);  // Llama a la función AJAX para enviar la solicitud al backend
+    }
+}

@@ -442,7 +442,58 @@ body {
 .banner_text.oculto{
     opacity: 0;
 }
+/* Estilo del contenedor del menú */
+.config{
+    position: absolute;
+    right: 2%;
+    width: 50px;
+    height: auto;
+}
 
+/* Estilo del botón del menú */
+.menu-btn {
+    background-color: #A7B8FC;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Ocultar el contenido desplegable por defecto */
+.menu-content {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    background-color: black;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Estilo de los enlaces dentro del menú desplegable */
+.menu-content a {
+    color: white;
+    padding: 8px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Cambiar color al pasar el mouse sobre los enlaces */
+.menu-content a:hover {
+    background-color: black;
+}
+
+/* Mostrar el menú desplegable al pasar el mouse */
+.menu:hover .menu-content {
+    display: block;
+}
+
+/* Cambiar el color del botón al pasar el mouse */
+.menu:hover .menu-btn {
+    background-color: #516cd7;
+}
 .banner_text {
 	color: #fff;
 	position: absolute;
@@ -947,10 +998,10 @@ button:hover{
     padding: 5px 5px;
     background-color: #024A98;
     border-radius: 10px;
-    width: 100px;
+    width: 230px;
     border: 2px #00336a solid;
     bottom: 45%;
-    left: 26%;
+    left: 40%;
 }
 .Reservar:hover{
     box-shadow: 0 0 10px blue;
@@ -1098,7 +1149,7 @@ button:hover{
 #fecha{
     position: absolute;
     bottom: 70%;
-    left: 51%;
+    left: 25%;
     border-radius: 10px;
     border: 2px #486dff solid;
     transition-duration: 400ms;
@@ -1106,7 +1157,7 @@ button:hover{
 .fecha{
     position: absolute;
     bottom: 70%;
-    left: 35%;
+    left: 11%;
 }
 #hora1{
     position: absolute;
@@ -1136,6 +1187,20 @@ button:hover{
     bottom: 52%;
     right: 29%;
 }
+#tipo-de-vehiculo{
+    position: absolute;
+    bottom: 70%;
+    right: 10%;
+    width: 16%;
+    border-radius: 10px;
+    border: 2px #486dff solid;
+    transition-duration: 400ms;
+}
+.tipo-de-vehiculo{
+    position: absolute;
+    bottom: 70%;
+    right: 29%;
+}
 .fin-reserva{
     position: absolute;
     top: 85%;
@@ -1153,7 +1218,7 @@ button:hover{
 }
 .pagar{
     position: absolute;
-    right: 5%;
+    right: 42%;
     top: 30%;
     padding: 5px 5px;
     background-color: #A7B8FC;
@@ -1337,4 +1402,38 @@ input:hover{
     box-shadow: 0 0 0 2px #486dff;
     transition-duration: 800ms;
     transition: 600ms;
+}
+
+/* fin estilos reserva */
+
+/* estilos factura */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #b7c5fb; /* Fondo azul claro */
+    margin-top: 10px;
+}
+
+.custom-table th {
+    background-color: #5e72c5; /* Fondo marrón claro */
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.custom-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #A7B8FC;
+}
+.btn-outline-primary a{
+    position: absolute;
+    left: 30%;
+}
+.mt-5 {
+    position: absolute;
+    top: 8%;
+    left: 5%;
 }

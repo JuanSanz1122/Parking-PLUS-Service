@@ -41,14 +41,19 @@
     </header> 
     <div class="info-inicio-sesion">
       <h2 class="info-ses-texto">Ingresa tu informacion</h2>
-      <label for="correo" class="correo-ses-text">Correo electronico</label>
-      <input type="text" placeholder="Correo electronico" id="correo" class="correo-ses">
-      <label for="contraseña" class="contraseña-ses-text">Contraseña</label>
-      <input type="password" placeholder="Contraseña" id="contraseña" class="contraseña-ses">
+      <form action="login.php" method="POST">
+        <label for="correo" class="correo-ses-text">Correo Electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required class="correo-ses">
+        
+        <label for="contraseña" class="contraseña-ses-text">Contraseña</label>
+        <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required class="contraseña-ses">
+        
         <a href="registro.html" class="registrarme">Regitrarse</a>
         <a href="" class="rec-contraseña">Olvide mi Contraseña</a>
-        <button class="Iniciar-sesion">Iniciar sesion</button>
+  
+        <button class="Iniciar-sesion" type="submit">Iniciar Sesión</button>
     </div>
   </div>
+  <script src="inicio_sesio.js"></script>
   </body>
- </html>
+ </html>
