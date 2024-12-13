@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reestablecer contraseña</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="img/isotipoico.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style..css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+            <a href="#home">
+                <img src="img/isotipo (nuevo).png" alt="Logo" style="height: 60px;">
+            </a>
+            <div class="container col-lg-10 col-md-8 col-sm-10">
+                <a class="navbar-brand navbar-brand-sm" href="index.html">
+                    <h1 class="nav-titulo">Parking PLUS Service</h1>
+                </a>
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="iniciar_sesion.html">Iniciar sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html"><i class="fa-solid fa-user"
+                                    style="color: #ffffff;"></i>Inicio</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <h1>Actualizar Contraseña</h1>
+    <form action="restablecer_contrasena.php" method="POST">
+        <div class="info-inicio-sesion">
+            <h2 class="info-ses-texto">Actualiza tu contraseña</h2>
+
+            <label for="correo" class="correo-ses-text">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required class="correo-ses">
+            <br><br>
+
+            <label for="nueva_contrasena" class="contrasena-ses-text">Nueva Contraseña:</label>
+            <input type="password" id="nueva_contrasena" name="nueva_contrasena" placeholder="Nueva contraseña" required
+                class="contrasena-ses">
+            <br><br>
+
+            <label for="confirmar_contrasena" class="re-contrasena-text">Confirmar Contraseña:</label>
+            <input type="password" id="confirmar_contrasena" name="confirmar_contrasena"
+                placeholder="Confirmar contraseña" required class="re-contrasena">
+            <br><br>
+            <button type="submit" class="Iniciar-sesion">Actualizar Contraseña</button>
+        </div>
+    </form>
+</body>
+
+</html>

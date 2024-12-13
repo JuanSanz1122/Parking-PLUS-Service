@@ -1,24 +1,31 @@
-<?php
-$error = true; // Simula un error
-?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alertas con PHP y SweetAlert2</title>
-
-    <!-- SweetAlert2 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <title>Document</title>
+    "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
 </head>
 <body>
-    <!-- SweetAlert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <?php
-session_start(); // Iniciar sesión
+<?php
+// Habilitar la visualización de errores para depuración
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 // Conexión a la base de datos
-include("conexion.php");
+$host = "localhost";
+$user = "root";
+$password = "";
+$dbname = "parqueadero";
+
+$conn = new mysqli($host, $user, $password, $dbname);
+
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
+}
+
 // Verificar si se envió el formulario
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Capturar datos del formulario
@@ -32,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Validar datos básicos
     if (empty($codigo_espacio) || empty($fecha) || empty($hora_inicio) || empty($hora_fin) || empty($tipo_vehiculo) || empty($placa) || empty($medio_pago)) {
-        echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+        echo "
             <script>
                 Swal.fire({
                     title: 'Campos incompletos',
@@ -52,13 +59,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         (hora_inicio < ? AND hora_fin > ?) OR
         (hora_inicio >= ? AND hora_fin <= ?)
     )";
-    $stmt_verificacion = $conexion->prepare($sql_verificacion);
+    $stmt_verificacion = $conn->prepare($sql_verificacion);
     $stmt_verificacion->bind_param("ssssssss", $codigo_espacio, $fecha, $hora_fin, $hora_inicio, $hora_inicio, $hora_fin, $hora_inicio, $hora_fin);
     $stmt_verificacion->execute();
     $resultado_verificacion = $stmt_verificacion->get_result();
 
     if ($resultado_verificacion->num_rows > 0) {
-        echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+        echo "
             <script>
                 Swal.fire({
                     title: 'Espacio reservado',
@@ -79,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $fin = strtotime($hora_fin);
 
     if ($inicio === false || $fin === false || $fin <= $inicio) {
-        echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+        echo "
             <script>
                 Swal.fire({
                     title: 'Horas inválidas',
@@ -108,24 +115,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Insertar la reserva en la base de datos
     $sql = "INSERT INTO reservas (codigo_espacio, fecha, hora_inicio, hora_fin, tipo_vehiculo, placa, medio_pago, precio) 
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-    $stmt = $conexion->prepare($sql);
+    $stmt = $conn->prepare($sql);
     $stmt->bind_param("sssssssi", $codigo_espacio, $fecha, $hora_inicio, $hora_fin, $tipo_vehiculo, $placa, $medio_pago, $precio_total);
 
     if ($stmt->execute()) {
-        echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+        echo "
             <script>
                 Swal.fire({
-                    title: '¡Reserva exitosa!',
-                    text: 'Tu reserva ha sido registrada correctamente.',
+                    title: 'Reserva realizada',
+                    text: 'La reserva se ha realizado exitosamente.',
                     icon: 'success',
-                    confirmButtonText: 'Ver resumen'
+                    confirmButtonText: 'Aceptar'
                 }).then(() => {
-                    window.location.href = 'resumen.php?codigo=$codigo_espacio&fecha=$fecha&inicio=$hora_inicio&fin=$hora_fin&vehiculo=$tipo_vehiculo&placa=$placa&medio=$medio_pago&precio=$precio_total';
+                    window.location.href = 'factura.php?codigo=$codigo_espacio&fecha=$fecha&inicio=$hora_inicio&fin=$hora_fin&vehiculo=$tipo_vehiculo&placa=$placa&medio=$medio_pago&precio=$precio_total';
                 });
             </script>";
         exit;
     } else {
-        echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+        echo "
             <script>
                 Swal.fire({
                     title: 'Error',
@@ -142,7 +149,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 
 // Cerrar conexión
-$conexion->close();
+$conn->close();
 ?>
+
 </body>
 </html>

@@ -46,3 +46,9 @@ const infoObserver = new IntersectionObserver((entradas) => {
 
 // Inicia la observación de "main_section"
 infoObserver.observe(main_section);
+fetch('cargar_usuario.php')
+.then(response => response.json())
+.then(data => {
+    document.getElementById('usuario').textContent = data.nombre_usuario || 'Usuario';
+})
+.catch(error => console.error('Error al cargar el usuario:', error));

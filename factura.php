@@ -26,7 +26,7 @@ $medio_pago_legible = $medios_pago_legibles[$medio_pago] ?? $medio_pago;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen de Reserva</title>
+    <title>Factura</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style..css">
@@ -106,7 +106,7 @@ $medio_pago_legible = $medios_pago_legibles[$medio_pago] ?? $medio_pago;
     <ul class="dropdown-menu" id="dropdownMenu" role="menu">
         <li><a href="#" onclick="descargarPDF()">PDF (pdf)</a></li>
     </ul>
-    <a href="index_protegido.php" class="btn btn-outline-primary">Inicio</a>
+    <a href="indexOperador.html" class="btn btn-outline-primary">Inicio</a>
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

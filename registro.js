@@ -1,71 +1,151 @@
 document.getElementById("formRegistro").addEventListener("submit", function (event) {
-    event.preventDefault();
+    event.preventDefault(); // Evitar el envío predeterminado del formulario
 
-    const cedula = document.getElementById("cedula").value;
-    const nombre = document.getElementById("nombre").value;
-    const correo = document.getElementById("correo").value;
-    const contraseña = document.getElementById("contraseña").value;
+    // Capturar los valores de los campos
+    const cedula = document.getElementById("cedula").value.trim();
+    const nombre = document.getElementById("nombre").value.trim();
+    const correo = document.getElementById("correo").value.trim();
+    const contrasena = document.getElementById("contrasena").value.trim();
 
-    // Validación de cédula
+    // Validar cédula
     if (!cedula) {
-        alert("Por favor, ingresa tu cédula.");
+        Swal.fire({
+            title: 'Cédula inválida',
+            text: 'Por favor, ingresa tu cédula.',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar',
+            customClass: {
+                confirmButton: 'boton-alert'
+            }
+        });
         return;
     }
     if (!/^\d{8,10}$/.test(cedula)) {
-        alert("La cédula debe ser un número válido (entre 8 y 10 dígitos).");
+        Swal.fire({
+            title: 'Cédula inválida',
+            text: 'La cédula debe contener entre 8 y 10 dígitos.',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar',
+            customClass: {
+                confirmButton: 'boton-alert'
+            }
+        });
         return;
     }
 
-    // Validación de nombre
+    // Validar nombre
     if (!nombre) {
-        alert("Por favor, ingresa tu nombre.");
+        Swal.fire({
+            title: 'Nombre inválido',
+            text: 'Por favor, ingresa tu nombre.',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar',
+            customClass: {
+                confirmButton: 'boton-alert'
+            }
+        });
         return;
     }
-    if (!/^[a-zA-Z\s]+$/.test(nombre) || nombre.trim().length < 3) {
-        alert("El nombre debe contener solo letras y al menos 3 caracteres.");
+    if (!/^[a-zA-Z\s]+$/.test(nombre)) {
+        Swal.fire({
+            title: 'Nombre inválido',
+            text: 'El nombre debe contener solo letras.',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar',
+            customClass: {
+                confirmButton: 'boton-alert'
+            }
+        });
         return;
     }
 
-    // Validación de correo
+    // Validar correo
     if (!correo) {
-        alert("Por favor, ingresa tu correo.");
+        Swal.fire({
+            title: 'Correo inválido',
+            text: 'Por favor, ingresa tu correo.',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar',
+            customClass: {
+                confirmButton: 'boton-alert'
+            }
+        });
         return;
     }
     const correoRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!correoRegex.test(correo)) {
-        alert("El correo electrónico no es válido.");
+        Swal.fire({
+            title: 'Correo inválido',
+            text: 'El correo electrónico no es válido.',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar',
+            customClass: {
+                confirmButton: 'boton-alert'
+            }
+        });
         return;
     }
 
-    // Validación de contraseña
-    if (!contraseña) {
-        alert("Por favor, ingresa tu contraseña.");
+    // Validar contrasena
+    if (!contrasena) {
+        Swal.fire({
+            title: 'Contrasena inválida',
+            text: 'Por favor, ingresa tu contrasena.',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar',
+            customClass: {
+                confirmButton: 'boton-alert'
+            }
+        });
         return;
     }
-    if (!/^(?=.*[A-Z]).{8,}$/.test(contraseña)) {
-        alert("La contraseña debe tener al menos 8 caracteres y una letra mayúscula.");
+    if (!/^(?=.*[A-Z]).{8,}$/.test(contrasena)) {
+        Swal.fire({
+            title: 'Contrasena inválida',
+            text: 'La contrasena debe tener al menos 8 caracteres y una letra mayúscula.',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar',
+            customClass: {
+                confirmButton: 'boton-alert'
+            }
+        });
         return;
     }
 
-    // Preparar los datos para enviar al servidor
+    // Crear un objeto FormData para enviar los datos al servidor
     const formData = new FormData();
     formData.append("cedula", cedula);
     formData.append("nombre", nombre);
     formData.append("correo", correo);
-    formData.append("contraseña", contraseña);
+    formData.append("contrasena", contrasena);
 
-    // Enviar los datos con fetch
+    // Enviar los datos al servidor con fetch
     fetch("procesar_registro.php", {
         method: "POST",
         body: formData,
     })
-        .then(response => response.text())
+        .then(response => response.json()) // Procesar la respuesta como JSON
         .then(data => {
-            // Mostrar respuesta del servidor
-            alert(data); // Puedes usar un modal o una notificación en lugar de alert
+            Swal.fire({
+                title: data.icon === "success" ? "Éxito" : "Información",
+                text: data.message,
+                icon: data.icon,
+                confirmButtonText: "Aceptar",
+                customClass: {
+                    confirmButton: "boton-alert"
+                }
+            });
         })
         .catch(error => {
-            alert("Hubo un error al procesar el formulario. Inténtalo de nuevo.");
             console.error("Error:", error);
+            Swal.fire({
+                title: "Error",
+                text: "Ocurrió un error inesperado. Por favor, inténtalo de nuevo.",
+                icon: "error",
+                confirmButtonText: "Aceptar",
+                customClass: {
+                    confirmButton: "boton-alert"
+                }
+            });
         });
 });
